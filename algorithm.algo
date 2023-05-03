@@ -1,0 +1,32 @@
+ALGORITHM checkpoint_algorithm
+VAR
+
+  charCount, wordCount, vowelCount: INTEGER;
+  vowels: ARRAY_OF type[5];
+  sentence, word: STRING;
+
+BEGIN
+  vowels := ["a", "e", "i", "o", "u"];
+  sentence := ("The quick brown fox jumped over the lazy dog.");
+  words := sentence.split(" ")
+  charCount : = 0
+  wordCount : = 0
+  vowelCount : = 0
+
+// wordcount solution.
+  FOR x FROM 0 TO (words.length)-1 STEP x++  DO
+    wordCount++;
+  END_FOR
+
+  // character count solution.
+  FOR y FROM 0 TO (sentence.length)-1 STEP y++  DO
+    charCount++;
+
+    // vowels count solution.
+  FOR z FROM 0 TO (vowels.length)-1 STEP z++  DO
+    IF (sentence[i] === vowels[j]) THEN
+        vowelCount++;
+  END_FOR
+    write("The number of words in the given sentence is: ", wordCount, charCount, vowelCount)
+    
+END
